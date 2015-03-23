@@ -1,0 +1,36 @@
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a class="add" href="device/list" target="navTab" rel="main"><span>刷新</span></a></li>
+            <li><a class="add" href="device/list?force=true" target="navTab" rel="main"><span>强制刷新</span></a></li>
+        </ul>
+    </div>
+    <table class="table" width="100%" layoutH="138">
+        <thead>
+            <tr>
+                <th><b>设备号</b></th>
+                <th><b>产品型号</b></th>
+                <th><b>分辨率</b></th>
+                <th><b>网络信息</b></th>
+                <th><b>操作</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            #foreach($dev in $devices)
+            <tr>
+                <td>$!dev.serialno</td>
+                <td>$!dev.product</td>
+                <td>$!dev.display</td>
+                <td>$!dev.netinfo</td>
+                <td>
+                    <a href="device/install?serialno=$!dev.serialno" target="dialog">安装软件</a> /
+                    <a href="device/uninstall?serialno=$!dev.serialno" target="dialog">卸载软件</a> / 
+                    <a href="record/record?deviceId=$!dev.serialno" target="navTab" rel="main">录制脚本</a> / 
+                    <a href="#">执行脚本</a> /
+                    <a href="#">查看报表</a>
+                </td>
+            </tr>
+            #end
+        </tbody>
+    </table>
+</div>

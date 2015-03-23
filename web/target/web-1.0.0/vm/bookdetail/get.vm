@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>挨踢圈今日$book.kw阅读——$book.title</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" />
+		<link rel="stylesheet" href="${baseUrl}css/style.css" type="text/css"/>
+        <link href="${baseUrl}css/openread.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body >
+		<div class="wrap">
+		<header class="header">
+			<div class="logo"><h3>挨踢圈-今日$book.kw阅读</h3></div>
+			<div class="menu-but"><a href="#"><img src="${baseUrl}img/menu.png"/></a></div>
+			<br class="clearfix"/>
+		</header>
+			<hr class="separator"/>
+		<div class="container">
+			<!-- Image Slider -->
+				<ul id="slider" class="slider">
+			      <li><img src="$book.lpic" alt="" style=" width: 350px;height: 500px;"></li>
+			    </ul>
+		<div class="content">
+			<h3>$book.title<br/><font color=yellow size=4pt>推荐指数:</font><font color=red size=4pt>$book.avgVoteStar</font></h3>
+			<p>$book.intro</p>
+<br/>
+			<h3>>>>精彩评论</h3>
+			#set($i=0)
+			#foreach($comment in $book.comments)
+			#if($i<$book.commentUsers.size())
+			<p><font color=yellow>$book.commentUsers.get($i)</font>:$comment</p>
+			#end
+			#set($i=$i+1)
+			#end
+			
+<br/>
+<p><h3>下载地址<h3><p>
+<p>
+#set($i=1)
+#foreach($url in $book.downloadUrls)
+<a href="#if($url=="error") ${baseUrl}$url #else $url #end"><font size=3pt>地址$i</font></a>&nbsp;&nbsp;
+#set($i=$i+1)
+#end
+<p>
+<p><p>
+<!-- <p><h3><a href="#"><font color="red">购买正版</font></a><h3><p> -->
+</div> <!-- content -->
+		#parse("foot.vm")
+	</body>
+</html>

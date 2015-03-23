@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+		#if($job=="")
+		openread猜您适合的职业
+		#else
+		您最适合的职业为：$job
+		#end
+		</title>
+    	<meta name="author" content="www.codeanywher.org/openread/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+	<style type="text/css">
+<!--
+body {
+ background-color: #CCCCFF;
+}
+-->
+</style>
+</head>
+<font size="18" color="red">
+#if($job=="")
+&nbsp;
+		#else
+		您最适合的职业为：$job<br/>
+#end
+</font>
+以下图书您最喜欢哪几本?<br/>
+<form action="guess" method="post">
+#foreach( $key in $bookMap.keySet())
+#set($book=$bookMap.get($key))
+<input type="checkbox" name="fav" value="${book.kw}">$!{book.title}-$!{book.author}<br/>
+<img src="$!{book.img}"/>
+<br/>
+#end
+<input type="submit" value="提交"/>
+<input type="reset" value="重选"/>
+</form>
+<br/>
+<a href="javascript:addFirend();">欢迎关注免费微阅读微信号：openread，请直接在添加好友中搜索添加,或扫描下面的二维码^_^</a>
+<img src="img/erweima.jpg" />

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>挨踢圈——关于我们</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <link href="css/openread.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body >
+		<div class="wrap">
+		<header class="header">
+			<div class="logo"><h1>挨踢圈-关于我们</h1></div>
+			<div class="menu-but"><a href="#"><img src="img/menu.png"/></a></div>
+			<br class="clearfix"/>
+		</header>
+			<hr class="separator"/>
+		<div class="container">
+			<!-- Image Slider -->
+				<ul id="slider" class="slider">
+			      <li><img src="img/logo.jpg" alt="" style=" width: 50px;height: 50px;"></li>
+			    </ul>
+		<div class="content">
+<p><font color=yellow>我们是谁：</font>我们是IT行业资深专家，热爱阅读和分享<p>		
+<p><font color=yellow>我们的使命：</font>人人都能成为技术专家<p>
+<p><font color=yellow>联系我们：</font>chenke1818#gmail.com<p>
+<p><p>
+<!-- <p><h3><a href="#"><font color="red">购买正版</font></a><h3><p> -->
+</div> <!-- content -->
+		#include("foot.vm")
+	</body>
+</html>

@@ -1,0 +1,36 @@
+#if($result.success)
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><span>详情：</span></li>
+        </ul>
+    </div>
+    <table class="table" width="110%" layoutH="138">
+        <thead>
+            <tr>
+                <th><b>序号</b></th>
+                <th><b>软件名</b></th>
+                <th><b>状态</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            #foreach($r in $result.data)
+            <tr>
+                <td>$velocityCount</td>
+                <td>$r.data</td>
+                <td>#if($r.success) 成功 #else 失败 #end</td>
+            </tr>
+            #end
+        </tbody>
+    </table>
+</div>
+#else
+<div class="alert">
+    <div class="error">
+        <div class="alertInner">
+            <div class="error"><h1>错误</h1>
+            <div class="msg">安装失败［未发现设备］!</div>
+        </div>
+    </div>
+</div>
+#end

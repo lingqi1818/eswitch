@@ -1,0 +1,22 @@
+<hr class="separator"/>
+				<aside>
+					<a name="menu"></a>
+						<ul class="menu">
+							<li class="icon home"><a href="${baseUrl}info/list/attr/${day}">今日资讯</a></li>
+							<li class="icon info"><a href="${baseUrl}booklist/${day}/detail">好书推荐</a></li>
+							<li class="icon bubble"><a href="#">专家讲堂</a></li>
+							<li class="icon add"><a href="${baseUrl}aboutus">关于我们</a></li>
+						</ul>
+				</aside>
+		</div> <!-- container -->
+<hr class="separator"/>
+		<footer class="footer">
+			<p>&copy All rights Reserved.</p>
+			<div class="social">
+				<a href="#"><img src="${baseUrl}img/facebook.png" alt=""></a>
+				<a href="#"><img src="${baseUrl}img/twitter.png" alt=""></a>
+				<a href="#"><img src="${baseUrl}img/gplus.png" alt=""></a>
+			</div>
+		</footer>
+		<div class="copy">Design by 陈科</div>
+		</div>	

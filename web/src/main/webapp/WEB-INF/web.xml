@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+        http://java.sun.com/xml/ns/j2ee  http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <listener>
+        <listener-class>org.codeanywhere.easyRestful.base.listener.ERStartListener</listener-class>
+    </listener>
+	
+    <servlet>
+        <servlet-name>easyRestful</servlet-name>
+        <servlet-class>org.codeanywhere.easyRestful.base.servlet.ERServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/hello/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/index/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/inter/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/today/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/s/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/guess/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/booklist/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/bookdetail/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/aboutus/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/error/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>easyRestful</servlet-name>
+        <url-pattern>/info/*</url-pattern>
+    </servlet-mapping>
+</web-app>

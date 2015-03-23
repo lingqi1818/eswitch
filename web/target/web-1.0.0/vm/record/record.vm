@@ -1,0 +1,85 @@
+<script type="text/javascript">
+var inter;
+var my_img;
+$(document).ready(function(){  
+jQuery.post("record/record/startGetSnapshot/attr/${deviceId}", {},function(result){
+var d = JSON.parse(result);
+my_img = d.data;
+});
+inter = setInterval(getSnapshot, 1000);  
+});
+function getSnapshot(){
+if($('#snapshot_img').length==0){
+jQuery.post("record/record/stopGetSnapshot/attr/${deviceId}", {},function(result){
+});
+clearInterval(inter);
+return;
+}
+$(document).ajaxStart(function(){
+$("#background,#progressBar").hide();
+});
+$("#snapshot_img").attr("src", "tmp/imgs/"+my_img+"?t="+new Date().getTime()); 
+$(document).ajaxStart(function(){
+$("#background,#progressBar").show();
+});
+}
+var img_start_x=$('#snapshot_img').offset().left;
+var img_start_y=$('#snapshot_img').offset().top;
+$("#click").click(function(){
+$("#click_div").removeClass().addClass("buttonDisabled");
+$("#click").html('取消');
+alert('请在左侧屏幕中点击获取坐标点!');
+$("#click").unbind();
+$("#click").click(function(){
+alert('aaa');
+$("#action_panel").append("<dl class='nowrap'><dt>追加点击坐标(500,100)</dt></dl>");
+});
+
+$('#snapshot_img').click(function(e){
+	alert(e.pageX-img_start_x);
+	alert(e.pageY-img_start_y);
+});
+});
+</script>
+<h2 class="contentTitle">脚本录制</h2>
+<div style="float:left; display:block;width:300px; border:solid 1px #CCC; background:#fff">
+	<img id="snapshot_img" src="#"  alt="手机实时图像" width=300px height=400px/>
+</div>
+				
+<div id="jbsxBox" class="unitBox" style="margin-left:246px;">
+	<!--#include virtual="list1.html" -->
+	<h2 class="contentTitle">操作</h2>
+<div class="buttonContent"><button>保存录制结果</button><div class="buttonContent"><button>回放</button>
+<div class="pageFormContent" layoutH="60" id="action_panel">
+	<fieldset>
+		<legend>录制动作</legend>
+		<dl class="nowrap">
+			<dt>点击 ：</dt>
+			<dd><div id="click_div" class="button"><div class="buttonContent"><button id="click">按钮</button></div></div></dd>
+		</dl>
+		<dl class="nowrap">
+			<dt>拖动 ：</dt>
+			<dd><div class="button"><div class="buttonContent"><button>按钮</button></div></div></dd>
+		</dl>
+		<dl class="nowrap">
+			<dt>输入：</dt>
+			<dd><div class="buttonActive"><div class="buttonContent"><button>按钮</button></div></div></dd>
+		</dl>
+		<dl class="nowrap">
+			<dt>按键：</dt>
+			<dd><div class="button"><div class="buttonContent"><button>按钮</button></div></div></dd>
+		</dl>
+	</fieldset>
+	
+		<legend>操作日志：</legend>
+		<dl class="nowrap">
+			<dt>点击坐标(500,100) </dt>
+		</dl>
+		<dl class="nowrap">
+			<dt>点击坐标(500,100) </dt>
+		</dl>
+		<dl class="nowrap">
+			<dt>点击坐标(500,100) </dt>
+		</dl>
+</div>
+</div>

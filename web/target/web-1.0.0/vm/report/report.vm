@@ -1,0 +1,29 @@
+<div class="pageContent">
+    <table class="table" width="100%" layoutH="138">
+        <thead>
+            <tr>
+                <th><b>设备号</b></th>
+                <th><b>产品型号</b></th>
+                <th><b>运行状况</b></th>
+                <th><b>执行日期</b></th>
+                <th><b>错误详情</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1234567890</td>
+                <td>samsung n7100</td>
+                <td>success</td>
+                <td>2013-12-01 15:00</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9876543421</td>
+                <td>xiaomi m1</td>
+                <td>fail</td>
+                <td>2013-12-02 15:00</td>
+                <td>assert “回帖” is null.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

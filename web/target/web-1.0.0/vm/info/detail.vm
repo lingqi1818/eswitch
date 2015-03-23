@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>挨踢圈今日资讯——$info.title</title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0" />
+		<link rel="stylesheet" href="${baseUrl}css/style.css" type="text/css"/>
+        <link href="${baseUrl}css/openread.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body >
+		<div class="wrap">
+		<header class="header">
+			<div class="logo"><h3>$info.title</h3></div>
+			<div class="menu-but"><a href="#"><img src="${baseUrl}img/menu.png"/></a></div>
+			<br class="clearfix"/>
+		</header>
+			<hr class="separator"/>
+		<div class="container">
+			<!-- Image Slider -->
+				<ul id="slider" class="slider">
+			    </ul>
+		<div class="content">
+			<p>
+			<font color=yellow>作者:</font>$info.author &nbsp;&nbsp;
+			<font color=yellow>原文链接:</font>$info.surl
+			&nbsp;&nbsp;<font color=yellow>更新时间:</font>$info.createTime</p>
+			<p>$info.context</p>
+<br/>
+<p><p>
+</div> <!-- content -->
+		#parse("foot.vm")
+	</body>
+</html>
