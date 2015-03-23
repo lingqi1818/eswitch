@@ -9,7 +9,7 @@ a)限流配置
     <bean id="api2" class="org.codeanywhere.common.eswitch.threshold.Api2" />
  
  
-    <bean id="xmlConfigurationStrategy" class="com.kuaidadi.app.common.eswitch.threshold.configuration.XmlConfigurationStrategy">
+    <bean id="xmlConfigurationStrategy" class="org.codeanywher.common.eswitch.threshold.configuration.XmlConfigurationStrategy">
         <property name="config">
             <list>
                 <value>org.codeanywhere.common.eswitch.threshold.Api2#func1 api2.func1 1</value>
